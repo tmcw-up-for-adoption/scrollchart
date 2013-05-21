@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel='stylesheet' type='text/css' href='' />
+        <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+        <style>
+        body {
+            width:400px;
+        }
+        #scroll-chart {
+            position:fixed;
+            top:0;
+            right:0;
+            left:0;
+            height:20px;
+            width:100%;
+            z-index:-10;
+        }
+        </style>
+    </head>
+    <body>
+        <canvas id='scroll-chart'></canvas>
+        <p id='foo'></p>
+        <script>
+        var gibberish = '';
+        var i = 4000;
+        while (i--) {
+            if (Math.random() > 0.9) gibberish += ' foo ';
+            if (Math.random() > 0.3) gibberish += ' a ';
+            if (Math.random() > 0.7) gibberish += ' barrr ';
+        }
+        document.getElementById('foo').innerHTML = gibberish;
+        </script>
+        <script src='scrollchart.js'></script>
+        <script>
+        scrollChart.barChart(document.getElementById('scroll-chart'));
+        </script>
+    </body>
+</html>
