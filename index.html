@@ -19,6 +19,14 @@
             width:100%;
             z-index:-10;
         }
+        #scroll-pie {
+            position:fixed;
+            bottom:50px;
+            left:50px;
+            height:50px;
+            width:50px;
+            z-index:-10;
+        }
         blockquote {
             margin:5px 0;
             padding:0px 10px;
@@ -32,10 +40,11 @@
     <body>
     <h1><a href='https://github.com/tmcw/scrollchart'>scrollchart on github</a></h1>
     <strong>(scroll to see)</strong>
-    <pre><code>scrollChart.barChart(
+    <pre><code>scrollChart.bar(
     document.getElementById('scroll-chart'));
     </code></pre>
         <canvas id='scroll-chart'></canvas>
+        <canvas id='scroll-pie'></canvas>
 <H3>ACT I</h3>
 <h3>SCENE I. Elsinore. A platform before the castle.</h3>
 <p><blockquote>
@@ -1143,7 +1152,8 @@
 </blockquote>
         <script src='scrollchart.js'></script>
         <script>
-        scrollChart.barChart(document.getElementById('scroll-chart'));
+        scrollChart.bar(document.getElementById('scroll-chart'));
+        scrollChart.pie(document.getElementById('scroll-pie'));
         </script>
     </body>
 </html>
