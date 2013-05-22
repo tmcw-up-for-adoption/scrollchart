@@ -35,14 +35,22 @@
         a[href] {
             color:darkblue;
         }
+        pre {
+            background:#eee;
+            padding:10px;
+            border:1px solid #aaa;
+        }
         </style>
     </head>
     <body>
     <h1><a href='https://github.com/tmcw/scrollchart'>scrollchart on github</a></h1>
-    <strong>(scroll to see)</strong>
     <pre><code>scrollChart.bar(
     document.getElementById('scroll-chart'));
-    </code></pre>
+
+scrollChart.pie(
+    document.getElementById('scroll-pie'));
+
+// scroll to see</code></pre>
         <canvas id='scroll-chart'></canvas>
         <canvas id='scroll-pie'></canvas>
 <H3>ACT I</h3>

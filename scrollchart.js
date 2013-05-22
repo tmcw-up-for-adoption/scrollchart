@@ -1,9 +1,7 @@
-function reqFrame(fn) {
-    (window.requestAnimationFrame || window.setTimeout)(fn, 0);
-}
+var reqFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.setTimeout;
 
 function scrollPercent() {
-    return document.body.scrollTop /
+    return (document.body.scrollTop || document.documentElement.scrollTop) /
         (document.documentElement.scrollHeight - window.innerHeight);
 }
 
@@ -24,7 +22,7 @@ function bar(elem, options) {
                 ctx.fillRect(0, 0, w, h);
                 ctx.fillStyle = options.fg;
                 ctx.fillRect(0, 0, w * p, h);
-            });
+            }, 0);
         });
     });
 }
@@ -65,7 +63,7 @@ function pie(elem, options) {
                 ctx.lineTo(w / 2, h / 2);
                 ctx.closePath();
                 ctx.fill();
-            });
+            }, 0);
         });
     });
 }
