@@ -5,7 +5,7 @@ applications like [pig](http://github.com/tmcw/pig).
 
 ### api
 
-`scrollChart.barChart(elem, options)`
+`scrollChart.bar(elem, options)`
 
 draw a bar chart-style visualization of scroll progress.
 
@@ -33,7 +33,7 @@ valid options are:
 ```
 
 ```js
-scrollChart.barChart(document.getElementById('scroll-chart'), {
+scrollChart.bar(document.getElementById('scroll-chart'), {
   fg: '#22aa33',
   bg: '#eee'
 });
